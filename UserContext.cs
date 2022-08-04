@@ -18,7 +18,7 @@ namespace IslandStranded
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             // Copy this for future projects. Rename the Database=""
-            options.UseSqlServer("Server=(localdc)\\mssqllocaldb;Database=IslandGameUserDb;Trusted_Connection=True;");
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=IslandGameUserDb;Trusted_Connection=True;");
         }
 
         // crucial step
