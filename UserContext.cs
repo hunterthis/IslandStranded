@@ -20,5 +20,9 @@ namespace IslandStranded
             // Copy this for future projects. Rename the Database=""
             options.UseSqlServer("Server=(localdc)\\mssqllocaldb;Database=IslandGameUserDb;Trusted_Connection=True;");
         }
+
+        // crucial step
+        //this add students to the DBcontext
+        public DbSet<User> Users { get; set; }
     }
 }
