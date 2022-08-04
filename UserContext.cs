@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace IslandStranded
 {
-    internal class UserContext : DbContext
+    // https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=visual-studio
+    internal class UserContext : DbContext // instal EF Core SQLServel package
     {
+        public UserContext()
+        {
 
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            // Copy this for future projects. Rename the Database=""
+            options.UseSqlServer("Server=(localdc)\\mssqllocaldb;Database=IslandGameUserDb;Trusted_Connection=True;");
+        }
     }
 }
