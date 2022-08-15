@@ -15,7 +15,7 @@ public class GlobalState
 
     public bool ShouldExit { get; set; }
 
-    public User? CurrentUser { get; set; }
+    // public User? CurrentUser { get; set; }
 
     // public Database Database { get; set; }
 }
