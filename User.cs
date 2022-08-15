@@ -21,7 +21,7 @@ namespace IslandStranded
         public string Password { get; set; }
 
         [Required] // need to make default value 0
-        public int CurrentStoryEventValue { get; set; }
+        public int CurrentStoryEventValue { get; set; } // int always defaults to zero
 
     }
 }
