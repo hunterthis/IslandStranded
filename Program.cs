@@ -1,4 +1,4 @@
-﻿using IslandStranded.Views; // use views folder
+using IslandStranded.Views; // use views folder
 
 namespace IslandStranded;
 
