@@ -19,7 +19,7 @@ internal class CreateAccountVIew : IView
     public void Execute()
     {
         Console.WriteLine("Create a new account");
-        // ToDo: exit program if you do not want to make a new accout
+        // ToDo: exit program if you do not want to make a new account
         // ToDo: Return back to welcome screen if you accidently select create account
 
 
