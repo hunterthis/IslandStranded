@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace IslandStranded
 {
     // https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=visual-studio
-    internal class UserContext : DbContext // instal EF Core SQLServel package
+    public class UserContext : DbContext // install EF Core SQLServel package. Must be public to work on Spectre.Console
     {
         public UserContext()
         {

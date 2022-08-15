@@ -25,7 +25,7 @@ public class WelcomeVIew : IView
         Quit
     }
 
-    
+
     public void Execute()
     {
         var choice = AnsiConsole.Prompt
@@ -41,10 +41,14 @@ public class WelcomeVIew : IView
                 _state.ShouldExit = true;
                 return;
 
+            case WelcomeViewChoice.CreateAccount:
+                _state.CurrentView = new CreateAccountVIew(_state);
+                return;
+
             default:
-                Console.WriteLine("Error: hit defaukt case on LogInView");
+                Console.WriteLine("Error: hit default case on LogInView");
                 return;
         }
-        
+
     }
 }

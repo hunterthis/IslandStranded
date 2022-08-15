@@ -1,19 +1,21 @@
 using IslandStranded.Views; // use views folder
 
-namespace IslandStranded;
 
-public static class Program
+namespace IslandStranded
 {
-    public static void Main()
+    public static class Program
     {
-        //var db = new database()
-        var state = new GlobalState();
-        //state.Database = db;
-        state.CurrentView = new WelcomeVIew(state);
-
-        while (!state.ShouldExit)
+        public static void Main()
         {
-            state.CurrentView.Execute();
+            var db = new UserContext();
+            var state = new GlobalState();
+            state.UserDatabase = db;
+            state.CurrentView = new WelcomeVIew(state);
+
+            while (!state.ShouldExit)
+            {
+                state.CurrentView.Execute();
+            }
         }
     }
 }
