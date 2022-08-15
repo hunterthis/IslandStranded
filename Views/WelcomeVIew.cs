@@ -46,7 +46,7 @@ public class WelcomeVIew : IView
                 return;
 
             default:
-                Console.WriteLine("Error: hit defaukt case on LogInView");
+                Console.WriteLine("Error: hit default case on LogInView");
                 return;
         }
 
