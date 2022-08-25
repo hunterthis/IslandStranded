@@ -19,6 +19,7 @@ namespace IslandStranded.Views
 
         public void Execute()
         {
+            Console.WriteLine("Welcone to the log in page");
             // ask for username
             var username = AnsiConsole.Ask<string>("Please enter your username: ");
             // ask for password
@@ -29,7 +30,6 @@ namespace IslandStranded.Views
                     Console.WriteLine("Your password needs to match. Please try again.");
                     return;
                 }
-            Console.WriteLine("Log In View not built yet");
         }
     }
 }
