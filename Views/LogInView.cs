@@ -24,21 +24,11 @@ namespace IslandStranded.Views
             // ask for password
             var password = AnsiConsole.Ask<string>("Please enter your password: ");
             // check if username == password
-            try 
-            {
-
-                if (password != _state.CurrentUser.Password)
+                if (password != _state.CurrentUser?.Password) // made nullable to remove the squiggly
                 {
                     Console.WriteLine("Your password needs to match. Please try again.");
                     return;
                 }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
-            
-
             Console.WriteLine("Log In View not built yet");
         }
     }
