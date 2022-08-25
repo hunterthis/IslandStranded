@@ -50,7 +50,6 @@ internal class CreateAccountVIew : IView
         _state.UserDatabase.Users.Add(user);
         _state.UserDatabase.SaveChanges();
         _state.CurrentView = new WelcomeVIew(_state);
-        // ToDo: implement LogInView
-        // _state.CurrentView = new LogInView(_state);
+        _state.CurrentView = new LogInView(_state);
     }
 }

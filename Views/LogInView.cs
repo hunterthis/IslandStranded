@@ -20,10 +20,25 @@ namespace IslandStranded.Views
         public void Execute()
         {
             // ask for username
+            var username = AnsiConsole.Ask<string>("Please enter your username: ");
             // ask for password
+            var password = AnsiConsole.Ask<string>("Please enter your password: ");
             // check if username == password
-            //if they are equal, proceed to program start
-            // execute program start
+            try 
+            {
+
+                if (password != _state.CurrentUser.Password)
+                {
+                    Console.WriteLine("Your password needs to match. Please try again.");
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
+
             Console.WriteLine("Log In View not built yet");
         }
     }
