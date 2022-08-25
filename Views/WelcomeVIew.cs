@@ -45,6 +45,10 @@ public class WelcomeVIew : IView
                 _state.CurrentView = new CreateAccountVIew(_state);
                 return;
 
+            case WelcomeViewChoice.LogIn:
+                _state.CurrentView = new LogInView(_state);
+                return;
+
             default:
                 Console.WriteLine("Error: hit default case on LogInView");
                 return;
