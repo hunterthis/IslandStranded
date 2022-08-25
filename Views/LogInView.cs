@@ -25,10 +25,13 @@ namespace IslandStranded.Views
             // ask for password
             var password = AnsiConsole.Ask<string>("Please enter your password: ");
             // check if username == password
-                if (password != _state.CurrentUser?.Password) // made nullable to remove the squiggly
+                if (password != _state.UserDatabase?.Find() // made nullable to remove the squiggly
                 {
-                    Console.WriteLine("Your password needs to match. Please try again.");
-                    return;
+                    Console.WriteLine("Your password needs to match. Please try again.");           
+                }
+                if (password == _state.CurrentUser?.Password)
+                {
+                    Console.WriteLine("Your password matches.");
                 }
         }
     }
