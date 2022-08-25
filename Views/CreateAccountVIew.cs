@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Spectre.Console;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace IslandStranded.Views;
 
@@ -15,24 +16,17 @@ internal class CreateAccountVIew : IView
     {
         _state = state;
     }
-
     public void Execute()
     {
         var CreateAccountBool = AnsiConsole.Ask<string>("Would you like to create a new account? Please type yes or no");
         Console.WriteLine();
-        // ToDo: exit program if you do not want to make a new accout
         // ToDo: Return back to welcome screen if you accidently select create account
 
-        if (CreateAccountBool == "yes")  
+        if (CreateAccountBool == "no")  
         {
-            // blank statement to access method below outside of elif statement
+            Console.WriteLine("Not creating username, program ending");
+            Environment.Exit(0);
         }
-        else if (CreateAccountBool == "no") 
-        {
-            Console.WriteLine("Returning to Welcome Page");          
-            _state.CurrentView = new  WelcomeVIew(_state);// returns to Welcome page
-        }
-
 
         var username = AnsiConsole.Ask<string>("Please enter your desired username: ");
         Console.WriteLine();
