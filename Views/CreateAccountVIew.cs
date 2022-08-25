@@ -18,12 +18,24 @@ internal class CreateAccountVIew : IView
 
     public void Execute()
     {
-        Console.WriteLine("Create a new account");
+        var CreateAccountBool = AnsiConsole.Ask<string>("Would you like to create a new account? Please type yes or no");
+        Console.WriteLine();
         // ToDo: exit program if you do not want to make a new accout
         // ToDo: Return back to welcome screen if you accidently select create account
 
+        if (CreateAccountBool == "yes")  
+        {
+            // blank statement to access method below outside of elif statement
+        }
+        else if (CreateAccountBool == "no") 
+        {
+            Console.WriteLine("Returning to Welcome Page");          
+            _state.CurrentView = new  WelcomeVIew(_state);// returns to Welcome page
+        }
+
 
         var username = AnsiConsole.Ask<string>("Please enter your desired username: ");
+        Console.WriteLine();
         var password = AnsiConsole.Ask<string>("Please enter your password: ");
         var passwordConfirmation = AnsiConsole.Ask<string>("Please confirm your password: ");
         int currentStoryEvent = 0;
