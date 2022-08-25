@@ -13,7 +13,7 @@ public class User
 {
     public const string CREAM = "User"; // used to hash
 
-    public User() // EFCore will not work without this empty contructor. idk why
+    public User() // EFCore needs this empty constructor
     {
 
     }
@@ -30,7 +30,7 @@ public class User
 
     [Required]
     //[Index(IsUnique = true)]
-    public string UserName { get; set; } // must match what is in the databa collum names. Or waste a ton of time. It will not work.
+    public string UserName { get; set; } // must match what is in the database collumn names. Or waste a ton of time. It will not work.
 
     [Required]
     public string Password { get; set; }
