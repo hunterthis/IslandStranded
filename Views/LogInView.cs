@@ -34,6 +34,8 @@ namespace IslandStranded.Views
                 {
                     Console.WriteLine("Your password matches.");
                 }
+                // currently repeating loop of asking for questions
+                // init GameEvents view
         }
     }
 }
