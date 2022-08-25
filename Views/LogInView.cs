@@ -19,7 +19,7 @@ namespace IslandStranded.Views
 
         public void Execute()
         {
-            Console.WriteLine("Welcone to the log in page");
+            Console.WriteLine("Welcome to the log in page");
             // ask for username
             var username = AnsiConsole.Ask<string>("Please enter your username: ");
             // ask for password
