@@ -28,11 +28,10 @@ namespace IslandStranded.Views
             // check if username == password
 
             var matchingUser = _state.UserDatabase.Users.FirstOrDefault(x => x.UserName == username);
-
             if (matchingUser != null)
             {
-                Console.WriteLine("Sorry, that username doesn't exist.");
-                Console.WriteLine("Please try a different username.");
+                Console.WriteLine("Sorry, that username or password doesn't exist.");
+                Console.WriteLine("Please try a different username or password.");
                 return;
             }
 
