@@ -42,6 +42,6 @@ namespace IslandStranded.Views
             // init GameEvents view
             //http://programmingisfun.com/learn/c-sharp-adventure-game/c_sharp_08_branching_narrative/
         }
-        }
     }
 }
+
