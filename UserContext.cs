@@ -21,7 +21,12 @@ namespace IslandStranded
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=IslandGameUserDb;Trusted_Connection=True;");
         }
 
+
         //this adds students to the DBcontext
+
+        // crucial step
+        //this adds Users to the DBcontext
+
         public DbSet<User> Users { get; set; }
 
     }

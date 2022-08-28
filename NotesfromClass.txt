@@ -6,3 +6,5 @@ things to check from notes in class
 such as:
   --needs nuget packages, enter build database on start
   -- add info about spectre console
+
+If updating Entity core framework, be sure to install from command line or it may not migrate 

@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -29,6 +29,8 @@ public class User
     public int Id { get; set; }
 
     [Required]
+
+
 
     public string UserName { get; set; } // must match what is in the database collumn names. Or waste a ton of time. It will not work.
 
