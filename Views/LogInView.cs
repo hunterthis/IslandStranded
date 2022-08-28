@@ -27,6 +27,19 @@ namespace IslandStranded.Views
             var password = AnsiConsole.Ask<string>("Please enter your password: ");
             // check if username == password
 
+            
+            if (password != password )  // is not functional, placeholder function for later once password matches with hashes
+                {
+                    Console.WriteLine("Your password needs to match. Please try again.");           
+                }
+                if (password == password)
+                {
+                    Console.WriteLine("Your password matches.");
+                }
+
+            _state.CurrentView = new GameEventsInterface(_state);
+
+
             var matchingUser = _state.UserDatabase.Users.FirstOrDefault(x => x.UserName == username);
             if (matchingUser != null)
             {
@@ -38,8 +51,7 @@ namespace IslandStranded.Views
             // after user log in confirmed, state = gamestate event
             _state.UserDatabase.SaveChanges();
             _state.CurrentView = new WelcomeVIew(_state);
-            // init GameEvents view
-            //http://programmingisfun.com/learn/c-sharp-adventure-game/c_sharp_08_branching_narrative/
+
         }
     }
 }
