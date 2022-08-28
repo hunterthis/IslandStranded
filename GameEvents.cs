@@ -12,8 +12,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
 
+// clears log in info from users view
+Console.Clear();
+
 namespace IslandStranded
 {
+   
+
     // calls CurrentUser data,
     // use intvalue as a parameter in play method 
     // creates array of events to access depending on users retrieved int value
