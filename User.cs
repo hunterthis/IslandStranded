@@ -29,7 +29,6 @@ public class User
     public int Id { get; set; }
 
     [Required]
-    //[Index(IsUnique = true)]
     public string UserName { get; set; } // must match what is in the database collumn names. Or waste a ton of time. It will not work.
 
     [Required]
