@@ -22,7 +22,7 @@ namespace IslandStranded
         }
 
         // crucial step
-        //this add students to the DBcontext
+        //this adds Users to the DBcontext
         public DbSet<User> Users { get; set; }
     }
 }
