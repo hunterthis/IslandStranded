@@ -46,7 +46,9 @@ public class GameEventsInterface : IView
                 return;
 
             case GameEventsInterfaceChoice.GoBack:
-                _state.CurrentView = new LogInView(_state);
+                Console.WriteLine("Oops, you went back and then got eaten by a shark. Better to go forward next time.");
+                // Can implement later, will create issue about it
+                _state.ShouldExit = true;
                 return;
 
             default:
