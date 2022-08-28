@@ -14,7 +14,13 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace IslandStranded
 {
-    internal class GameEvents
+    // calls CurrentUser data,
+    // use intvalue as a parameter in play method 
+    // creates array of events to access depending on users retrieved int value
+
+
+
+    class GameEvents
     {
         /*
         Part -1
