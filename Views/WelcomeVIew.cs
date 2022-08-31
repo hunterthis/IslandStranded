@@ -31,8 +31,8 @@ public class WelcomeVIew : IView
         var choice = AnsiConsole.Prompt
             (
                 new SelectionPrompt<WelcomeViewChoice>()
-                    .Title("Welcome to our game. What will you do next?") // Tile/ intro text
-                    .AddChoices(Enum.GetValues<WelcomeViewChoice>()) // choices from the WelcomViewChoice
+                    .Title("Welcome to our game. What will you do next?") // Title/ intro text
+                    .AddChoices(Enum.GetValues<WelcomeViewChoice>()) // choices from the WelcomeViewChoice
             );
 
         switch (choice)
@@ -45,6 +45,10 @@ public class WelcomeVIew : IView
                 _state.CurrentView = new CreateAccountVIew(_state);
                 return;
             
+            case WelcomeViewChoice.LogIn:
+                _state.CurrentView = new LogInView(_state);
+                return;
+
             case WelcomeViewChoice.LogIn:
                 _state.CurrentView = new LogInView(_state);
                 return;
