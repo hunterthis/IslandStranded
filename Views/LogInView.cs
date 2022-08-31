@@ -7,9 +7,8 @@ using Spectre.Console;
 
 
 namespace IslandStranded.Views
-
 {
-
+    public class LogInView : IView
     {
         private readonly GlobalState _state;
 
@@ -20,7 +19,6 @@ namespace IslandStranded.Views
 
         public void Execute()
         {
-
             Console.WriteLine("Logging in!");
 
             var username = AnsiConsole.Ask<string>("Please enter your username: ");
@@ -38,8 +36,6 @@ namespace IslandStranded.Views
 
             _state.CurrentUser = matchingUser;
             _state.CurrentView = new GameStartView(_state);
-
         }
     }
 }
-
