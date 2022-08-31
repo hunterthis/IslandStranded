@@ -44,6 +44,10 @@ public class WelcomeVIew : IView
             case WelcomeViewChoice.CreateAccount:
                 _state.CurrentView = new CreateAccountVIew(_state);
                 return;
+            
+            case WelcomeViewChoice.LogIn:
+                _state.CurrentView = new LogInView(_state);
+                return;
 
             case WelcomeViewChoice.LogIn:
                 _state.CurrentView = new LogInView(_state);
