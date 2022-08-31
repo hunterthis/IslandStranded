@@ -1,19 +1,16 @@
 # IslandStranded
 Choose your own adventure text based game
 
-Steps moving forward to code and plan and create issues out of:
+The game is up and running. 
 
-1. Events -- almost finished
-2. Intro
-  -Login ___
-  -New User
-    -Create new user account
-    -check for duplicates
-    -ask for password
-3. Create database
-    -Username and password
-    -place in storyline as value
-    
- Possible methods:
-  -Replace Storyline Value Event
-  - Create User account
+## Requirements
+
+1. EntityFrameworkCore 
+
+## Steps moving forward to code and plan and create issues out of:
+
+1. We need to add more story events.
+2. Save the users progress to be able to use the continue feature. 
+  - The storyevent tracker is already hardcoded into the User object as 0.
+4. The ability to exit or go back to welcome view when creating an account or logging in.
+5. Erase the intial log in text when the game starts.
